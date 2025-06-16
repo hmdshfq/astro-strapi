@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const { destination } = Astro.params;
+
+export function getStaticPaths() {
+  const destinations = ['warsaw', 'karachi', 'london'];
+  return destinations.map(destination => ({
+    params: { destination }
+  }))
+}
+
+export const prerender = true;
+---
+<Layout>
+    <h1>Welcome to { destination }!</h1>
+</Layout>
