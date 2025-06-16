@@ -1,0 +1,9 @@
+---
+const response = await fetch(`${Astro.url.origin}/api/products.json`);
+const {products } = await response.json();
+---
+<ul>
+    {
+      products.map(product => <li>{product.name}</li>)
+    }
+</ul>
