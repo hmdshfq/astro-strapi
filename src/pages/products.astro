@@ -14,7 +14,7 @@ const {products } = await response.json();
   const button = document.querySelector('#purchase');
   button.addEventListener('click', async()=>{
     const randomProduct = Math.floor(Math.random() * 2) + 1;
+    const response = await fetch(`${location.origin}/api/${randomProduct}.json`);
+    await response.json();
   })
-  const response = await fetch(`${location.origin}/api/${randomProduct}.json`);
-  await response.json();
 </script>

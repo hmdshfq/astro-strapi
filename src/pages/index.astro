@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const products = 'Astro and Strapi';
+export const prerender = true;
 ---
 
 <Layout title="Home | Astro + Strapi">
-	<h1>App development with Astro and Strapi</h1>
+	<h1>App development with { products }</h1>
 </Layout>
