@@ -1,6 +1,6 @@
-import { listProducts } from '../utils/db.js';
+import { listProducts } from '../../utils/db.js';
 
 export async function GET() {
   const products = await listProducts();
-  return response(JSON.stringify({ products }));
+  return new Response(JSON.stringify({ products }));
 }
